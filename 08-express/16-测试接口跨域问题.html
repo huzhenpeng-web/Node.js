@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jQuery3.6.0.js"></script>
+</head>
+
+<body>
+    <button id="btnGet">get</button>
+    <button id="btnPost">post</button>
+    <button id="btnJSONP">jsonp</button>
+    <script>
+        $(function() {
+            //1.测试get接口
+            $('#btnGet').on('click', function() {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'http://127.0.0.1/api/get',
+                        data: {
+                            name: 'zs',
+                            age: 20
+                        },
+                        success: function(res) {
+                            console.log(res);
+                        }
+                    })
+                })
+                //2.测试post接口
+            $('#btnPost').on('click', function() {
+                $.ajax({
+                    type: 'post',
+                    url: 'http://127.0.0.1/api/post',
+                    data: {
+                        name: '小白',
+                        age: 20
+                    },
+                    success: function(res) {
+                        console.log(res);
+                    }
+                })
+            })
+
+            //3.测试jsonp接口
+            $('#btnJSONP').on('click', function() {
+                $.ajax({
+                    type: 'get',
+                    url: 'http://127.0.0.1/api/jsonp',
+                    dataType: 'jsonp',
+                    success: function(res) {
+                        console.log(res);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

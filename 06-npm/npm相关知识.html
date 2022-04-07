@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    npm install 包的完整名称
+    npm i 完整的包名称
+    node_modules文件夹用来存放所有已安装到项目中的包。require()导入第三方包时,就是从这个目录中查找并加载包
+    package-lock.json配置文件用来记录node_modules目录下的每一个包的下载信息,例如包的名字、版本号、下载地址等
+     -->
+    <!-- 
+    包的语义化版本规范
+    包的版本号是以“点分十进制”形式进行定义的 总共有三位数字 例如2.24.0
+    第1位数字:大版本
+    第2位数字:功能版本
+    第3位数字:bug修复版本
+
+    只要前面的版本号提升 后面的版本归零
+ -->
+    <!-- npm init -y 创建package.json -->
+    <!-- 一次性安装所有的包
+        npm install 或 npm i 一次性安装所有的依赖包
+    -->
+
+    <!-- package.json
+    核心依赖包
+    dependencies节点 描述的是下载的包和版本号 某些包在开发和项目上线之后都需要用到 则建议把这些包记录到dependencies节点中
+    开发依赖包
+    devdependcies节点 某些包只在项目开发阶段会用到 在项目上线不会用到 则把这些包记录到devDependcies中
+-->
+
+    <!-- 卸载包
+        npm uninstall 具体的包名
+    -->
+    <!-- 
+        安装指定的包 并记录到devDependencies节点中
+        npm i 包名 -D
+        //上面是简写 等价于下面完整写法
+        npm install 包名 --save-dev
+     -->
+</body>
+
+</html>

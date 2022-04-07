@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CommonJS规定
+    1.每个模块内部，module变量代表当前模块
+    2.module变量是一个对象，它的exports属性(即module.exports)是对外的接口
+    3.加载某个模块,其实是加载该模块的module.exports属性.require()方法用于加载该模块
+  -->
+    <script>
+        var a = 10
+
+        function test() {
+            console.log(a);
+            a = 12
+            console.log(a);
+        }
+        test()
+        console.log(a);
+    </script>
+</body>
+
+</html>

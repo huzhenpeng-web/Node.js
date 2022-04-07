@@ -1,0 +1,7 @@
+Session认证的局限性
+  Session认证机制需要配合Cookie才能实现。
+
+  当前端请求后端接口不存在跨域问题的时候，推荐使用Session身份认证机制
+  当前端需要跨域请求后端接口的时候 推荐使用JWT认证机制
+
+JWT(JSON Web Token)
